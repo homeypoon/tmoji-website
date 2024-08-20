@@ -3,12 +3,14 @@
   --clr-primary-300: hsla(13, 83%, 60%, 1); /* Borders */
   --clr-primary-500: hsla(13, 83%, 53%, 1);
 
-  --clr-neutral-200: hsla(30, 100%, 99%, 1);
+  --clr-neutral-100: hsla(30, 100%, 99%, 1);
   --clr-neutral-300: hsla(35, 50%, 95%, 1);
 
   --clr-neutral-800: hsla(3, 100%, 4%, 1);
 
   --clr-border: var(--clr-primary-300);
+
+  --clr-neutral-800-opacity-25: hsla(0, 0%, 0%, 0.25);
 
   /* Font Families */
   --ff-base: "Poppins", sans-serif;
@@ -32,7 +34,7 @@
   --fs-100: 1.125rem; /* Attribution */
 }
 
-@media (min-width: 35em) {
+@media (max-width: 35rem) {
   :root {
     --fs-800: 2.5rem;
     --fs-700: 3rem;
@@ -132,8 +134,8 @@ svg {
   background-color: var(--clr-primary-500);
 }
 
-.bg-neutral-200 {
-  background-color: var(--clr-neutral-200);
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100);
 }
 
 .bg-neutral-300 {
@@ -152,8 +154,8 @@ svg {
   color: var(--clr-primary-500);
 }
 
-.text-neutral-200 {
-  color: var(--clr-neutral-200);
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
 }
 
 .text-neutral-300 {
@@ -239,4 +241,49 @@ svg {
 .fs-700,
 .fs-600 {
     line-height: 1.1;
+}
+
+/* For hyphenated words like T-moji and t-mate */
+.nowrap {
+  white-space: nowrap;
+}
+
+.subtitle {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-neutral-300);
+  text-transform: uppercase;
+}
+
+/* General Styling */
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-300);
+  background-color: var(--clr-neutral-300);
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  font-family: var(--ff-accent);
+}
+
+.base-button {
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 1.5vmax;
+  padding: 1em 0.8em;
+  line-height: 1;
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-300);
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-800);
+  box-shadow: 0.25em 0.25em 0.25em 0 var(--clr-neutral-800-opacity-25);
+}
+
+.features > .card > h3 {
+  font-weight: var(--fw-extra-bold);
+  font-size: var(--fs-500);
 }
