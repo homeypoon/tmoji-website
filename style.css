@@ -30,8 +30,20 @@
   --fs-500: 3rem; /* section title */
   --fs-400: 1.625rem; /* large body, subtitle */
   --fs-300: 1.5rem; /* body, button text */
-  --fs-200: 1.25rem; /* Copyright */
-  --fs-100: 1.125rem; /* Attribution */
+  --fs-200: 1.25rem; /* copyright */
+  --fs-100: 1.125rem; /* attribution */
+
+  --size-100: 0.25rem;
+  --size-200: 0.5rem;
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-450: 1.25rem;
+  --size-500: 1.5rem;
+  --size-600: 2rem;
+  --size-650: 2.5rem;
+  --size-700: 3rem;
+  --size-800: 3.5rem; /* between cards */
+  --size-900: 4rem;
 }
 
 @media (max-width: 35rem) {
@@ -44,6 +56,13 @@
     --fs-300: 1.125rem;
     --fs-200: 1rem;
     --fs-100: 0.875rem;
+  }
+}
+
+
+@media (max-width: 25rem) {
+  :root {
+    --fs-300: 1rem;
   }
 }
 
@@ -252,11 +271,12 @@ svg {
   text-transform: uppercase;
 }
 
-.subtitle {
-  font-size: var(--fs-400);
-  font-weight: var(--fw-semi-bold);
-  color: var(--clr-neutral-300);
-  text-transform: uppercase;
+.vertical-align-center {
+  justify-items: center;
+}
+
+:where(.flow :not(:first-child)) {
+  margin-top: var(--flow-spacer, var(--size-800));
 }
 
 /* General Styling */
@@ -274,6 +294,13 @@ h3 {
   font-family: var(--ff-accent);
 }
 
+.subtitle {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-neutral-300);
+  text-transform: uppercase;
+}
+
 .base-button {
   cursor: pointer;
   text-decoration: none;
@@ -289,9 +316,29 @@ h3 {
   box-shadow: 0.25em 0.25em 0.25em 0 var(--clr-neutral-800-opacity-25);
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: var(--size-400);
+  width: min(75em, (100% - (var(--size-400) * 2)));
+  margin-inline: auto;
+  padding: var(--size-700) var(--size-600) var(--size-700);
+  border-radius: 3% 3% 4% 4%;
+  border-top: 6px var(--clr-primary-300) solid;
+  background-color: var(--clr-neutral-100);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 12px -5px;
+}
+
 .features > .card > h3 {
   font-weight: var(--fw-extra-bold);
   font-size: var(--fs-500);
+  margin-top: var(--size-300);
+}
+
+.features > .card > p {
+  font-size: var(--fs-300);
+  text-wrap: pretty;
 }
 
 footer ul {
@@ -299,4 +346,8 @@ footer ul {
   flex-direction: row;
   justify-content: center;
   gap: 2.2rem;
+}
+
+.card {
+  margin-block: var(--size-800);
 }
