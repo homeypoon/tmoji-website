@@ -240,12 +240,16 @@ svg {
 .fs-800,
 .fs-700,
 .fs-600 {
-    line-height: 1.1;
+  line-height: 1.1;
 }
 
 /* For hyphenated words like T-moji and t-mate */
 .nowrap {
   white-space: nowrap;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .subtitle {
@@ -263,7 +267,9 @@ body {
   background-color: var(--clr-neutral-300);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   line-height: 1.25;
   font-family: var(--ff-accent);
 }
@@ -286,4 +292,11 @@ h1, h2, h3 {
 .features > .card > h3 {
   font-weight: var(--fw-extra-bold);
   font-size: var(--fs-500);
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2.2rem;
 }
