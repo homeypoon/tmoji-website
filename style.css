@@ -36,6 +36,7 @@
   --size-50: 0.125rem;
   --size-100: 0.25rem;
   --size-200: 0.5rem;
+  --size-250: 0.625rem;
   --size-300: 0.75rem;
   --size-400: 1rem;
   --size-450: 1.25rem;
@@ -273,12 +274,6 @@ svg {
   font-size: var(--fs-100);
 }
 
-.fs-800,
-.fs-700,
-.fs-600 {
-  line-height: 1.1;
-}
-
 /* For hyphenated words like T-moji and t-mate */
 .nowrap {
   white-space: nowrap;
@@ -314,7 +309,7 @@ body {
 h1,
 h2,
 h3 {
-  line-height: 1.25;
+  line-height: 1.2;
   font-family: var(--ff-accent);
   text-wrap: balance;
 }
@@ -333,7 +328,7 @@ h3 {
   text-transform: uppercase;
   border: 0;
   border-radius: 1.5vmax;
-  padding: 1em 0.8em;
+  padding: var(--size-500) var(--size-600);
   line-height: 1;
   font-weight: var(--fw-semi-bold);
   font-size: var(--fs-300);
@@ -399,7 +394,7 @@ h3 {
 }
 
 .hero button {
-  margin-top: var(--size-450);
+  margin-top: var(--size-600);
 }
 
 .hero img {
@@ -430,6 +425,26 @@ h3 {
   font-size: var(--fs-300);
 }
 
+/* Call to Action Section */
+.call-to-action {
+  border-radius: 5% 5% 0px 0px;
+  padding: var(--size-900) var(--size-600) var(--size-900);
+}
+
+.call-to-action .subtitle {
+  margin-top: var(--size-250);
+}
+
+.call-to-action button {
+  margin-top: var(--size-600);
+}
+
+.call-to-action img {
+  margin-top: var(--size-600);
+  width: min(85%, 28rem);
+}
+
+/* Footer */
 footer ul {
   display: flex;
   flex-direction: row;
