@@ -323,7 +323,26 @@ h3 {
   text-transform: uppercase;
 }
 
-.base-button {
+a {
+  color: var(--clr-neutral-100);
+}
+
+/* Hover state */
+footer .attribution:hover {
+  color: var(--clr-primary-300);
+}
+
+a:visited {
+  color: var(--clr-primary-300);
+}
+
+a:visited:hover {
+  color: var(--clr-neutral-100);
+}
+
+
+
+.download-button {
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
@@ -336,6 +355,11 @@ h3 {
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-800);
   box-shadow: 0.25em 0.25em 0.25em 0 var(--clr-neutral-800-opacity-25);
+}
+
+.download-button:hover,
+.download-button:focus-visible {
+  opacity: 0.8;
 }
 
 .card {
@@ -446,10 +470,8 @@ h3 {
 }
 
 /* Footer */
-
 footer {
   padding: var(--size-650) var(--size-250) var(--size-600);
-
 }
 
 footer ul {
@@ -467,3 +489,9 @@ footer p:nth-of-type(2) {
   margin-top: var(--size-250);
   text-wrap: balance;
 }
+
+.social-icons ul li a:hover,
+.social-icons ul li a:focus-visible {
+  opacity: 0.7;
+}
+
