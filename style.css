@@ -55,6 +55,7 @@
 
   --container-padding: var(--size-550);
   --hero-padding: var(--size-850) var(--size-600) var(--size-900);
+  --card-padding: var(--size-700) var(--size-600) var(--size-700);
   --button-padding: var(--size-500) var(--size-600);
 
   /* margin below hero and above CTA */
@@ -371,7 +372,7 @@ a:visited:hover {
   width: min(75em, (100% - (var(--container-padding) * 2)));
   max-width: var(--container-max-width);
   margin-inline: auto;
-  padding: var(--size-700) var(--size-600) var(--size-700);
+  padding: var(--card-padding);
   border-radius: 3% 3% 4% 4%;
   border-top: 6px var(--clr-primary-300) solid;
   background-color: var(--clr-neutral-100);
@@ -438,7 +439,6 @@ a:visited:hover {
 
 .hero {
   position: relative;
-  border: red solid 2px;
 }
 
 /* Hero Section */
@@ -458,8 +458,6 @@ a:visited:hover {
   margin-right: auto;
   margin-left: auto;
   width: clamp(120px, 45%, 450px);
-  /* max-width : 350px; */
-  /* width: 150px; */
 }
 
 /* About Section */
@@ -476,7 +474,6 @@ a:visited:hover {
 .features {
   display: grid;
   grid-auto-rows: 1fr; /* makes all rows same height */
-  /* grid-template-columns: repeat(1, 1fr); */
 }
 
 .features .card h3 {
@@ -495,7 +492,6 @@ a:visited:hover {
 }
 
 /* Call to Action Section */
-
 .call-to-action-container {
   border-radius: 5% 5% 0px 0px;
   padding: var(--size-900) var(--size-700) var(--size-900);
@@ -543,10 +539,8 @@ footer p:nth-of-type(2) {
   opacity: 0.7;
 }
 
-/* Below 23.5em */
 @media (max-width: 23.5rem) {
   :root {
-    /* background-color: black; */
     --fs-400: 1.125rem;
     --fs-300: 1rem;
     --container-padding: var(--size-400);
@@ -562,7 +556,6 @@ footer p:nth-of-type(2) {
 /* Large fonts */
 @media (min-width: 42em) and (max-width: 57em), (min-width: 75em) {
   :root {
-    background-color: orange;
     --fs-800: 5rem; /* header title */
     --fs-700: 5rem; /* footer title */
     --fs-600: 3.5rem; /* about title */
@@ -576,19 +569,13 @@ footer p:nth-of-type(2) {
     --button-padding: var(--size-600) var(--size-700);
   }
 
-  /* .features {
-    grid-template-columns: repeat(2, 1fr);
-  } */
-
   .card {
     padding-top: auto;
-    background-color: rgb(100, 199, 235);
-
     gap: var(--size-200);
   }
 }
 
-/* 2x2 Grid between 50em and 80 em CHANGEEE!!!!!!!! */
+/* 2x2 Grid */
 @media (min-width: 57em) and (max-width: 75em) {
   :root {
     --fs-800: 5rem; /* header title */
@@ -626,7 +613,7 @@ footer p:nth-of-type(2) {
     --fs-700: 2.75rem;
   }
 
-  /* Added spacing between about and top of features section */
+  /* Spacing between about and top of features section */
   .features .card:nth-child(1),
   .features .card:nth-child(2) {
     --feature-card-margin: var(--size-850);
@@ -641,12 +628,7 @@ footer p:nth-of-type(2) {
 /* Larger Hero and Call to Action after 2x2 Grid */
 @media (min-width: 57em) {
   :root {
-    background-color: aqua;
     --hero-padding: var(--size-900) var(--size-800) var(--size-900);
-
-    /* --main-margin: var(--size-800); */
-    /* --feature-card-margin: var(--size-700); */
-    /* --container-padding: var(--size-700); */
   }
 
   /* Hero */
@@ -658,12 +640,10 @@ footer p:nth-of-type(2) {
   .hero .content {
     text-align: left;
     flex: 7.5;
-    background-color: green;
   }
 
   .hero img {
     flex: 2.5;
-    background-color: antiquewhite;
   }
 
   /* CTA */
@@ -679,17 +659,11 @@ footer p:nth-of-type(2) {
   .call-to-action .content {
     text-align: left;
     flex: 6;
-    /* background-color: green; */
   }
 
   .call-to-action img {
     flex: 4;
   }
-
-  /* Topbar */
-  /* .topbar {
-    margin: var(--size-500) var(--size-600);
-  } */
 
   .topbar img {
     width: 64px;
@@ -701,12 +675,6 @@ footer p:nth-of-type(2) {
     padding: 6px;
     box-shadow: 2px 4px 4px 0px hsla(0, 0%, 0%, 0.2);
   }
-
-  /* Card */
-  /* .about,
-  .features {
-    margin-inline: var(--size-400);
-  } */
 
   /* Footer */
   footer {
@@ -737,19 +705,13 @@ footer p:nth-of-type(2) {
 
 /* Large cards */
 @media (min-width: 75em) {
-  :root {
-    /* --container-padding: var(--size-300);
-    --feature-card-margin: var(--size-600);
-    --main-margin: var(--size-900); */
-  }
 
-  /* .topbar {
-    margin: var(--size-650) var(--size-850);
-  } */
+  :root {
+    --card-padding: var(--size-850) var(--size-900) var(--size-850) var(--size-850);
+  }
 
   .features .card {
     display: flex;
-    padding: var(--size-900) var(--size-900) var(--size-900) var(--size-850);
     gap: var(--size-700);
   }
 
@@ -767,13 +729,10 @@ footer p:nth-of-type(2) {
     justify-content: center;
     text-align: left;
     flex: 7.5;
-
-    /* background-color: rgb(128, 0, 68); */
   }
 
   .features .card img {
     flex: 2.5;
-    /* background-color: antiquewhite; */
   }
 
   .call-to-action-container {
