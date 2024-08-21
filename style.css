@@ -59,7 +59,9 @@
 
   --container-padding: var(--size-550);
 
-  --main-margin: var(--size-800);
+  /* margin below hero and above CTA */
+  --main-margin: var(--size-800); 
+  
   --feature-card-margin: var(--size-700);
 }
 
@@ -102,8 +104,6 @@
 /* between 50em and 80 em (2x2 Grid) CHANGEEE!!!!!!!! */
 @media (min-width: 52em) and (max-width: 80em) {
   :root {
-    background-color: purple;
-
     --fs-800: 5rem; /* header title */
     --fs-700: 5rem; /* footer title */
     --fs-600: 3.5rem; /* about title */
@@ -113,6 +113,7 @@
     --fs-200: 1.25rem; /* copyright */
     --fs-100: 1.125rem; /* attribution */
 
+    --container-padding: var(--size-300);
     --feature-card-margin: var(--size-600);
     --main-margin: var(--size-900);
   }
@@ -134,14 +135,15 @@
     --fs-100: 0.875rem; /* attribution */
   }
 
+  /* Added spacing between about and top of features section */
   .features .card:nth-child(1),
   .features .card:nth-child(2) {
-    --feature-card-margin: var(--size-900);
+    --feature-card-margin: var(--size-850);
   }
 
-
-  .about, .features  {
-    margin-inline: var(--size-650);
+  .about,
+  .features {
+    margin-inline: var(--size-400);
   }
 }
 
