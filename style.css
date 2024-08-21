@@ -47,7 +47,7 @@
   --size-600: 2rem;
   --size-650: 2.5rem;
   --size-700: 3rem;
-  --size-800: 3.5rem; /* between cards */
+  --size-800: 3.5rem;
   --size-850: 4rem;
   --size-900: 5rem;
   --size-950: 5.5rem;
@@ -58,6 +58,9 @@
   --breakpoint-large: 80em;
 
   --container-padding: var(--size-550);
+
+  --main-margin: var(--size-800);
+  --feature-card-margin: var(--size-700);
 }
 
 /* Below 23.5em */
@@ -71,7 +74,7 @@
 }
 
 /* 25em to 30em and 40+em */
-@media (min-width: 42em) and (max-width: 50em), (min-width: 80em) {
+@media (min-width: 42em) and (max-width: 52em), (min-width: 80em) {
   :root {
     background-color: orange;
     --fs-800: 5rem; /* header title */
@@ -82,6 +85,8 @@
     --fs-300: 1.5rem; /* body, button text */
     --fs-200: 1.25rem; /* copyright */
     --fs-100: 1.125rem; /* attribution */
+
+    --container-padding: var(--size-650);
   }
 
   /* .features {
@@ -91,15 +96,14 @@
   .card {
     padding-top: auto;
     gap: var(--size-200);
-    margin-block: var(--size-450);
   }
 }
 
-/* between 50em and 80 em CHANGEEE!!!!!!!! */
-@media (min-width: 50em) and (max-width: 80em) {
+/* between 50em and 80 em (2x2 Grid) CHANGEEE!!!!!!!! */
+@media (min-width: 52em) and (max-width: 80em) {
   :root {
     background-color: purple;
-    
+
     --fs-800: 5rem; /* header title */
     --fs-700: 5rem; /* footer title */
     --fs-600: 3.5rem; /* about title */
@@ -108,25 +112,37 @@
     --fs-300: 1.5rem; /* body, button text */
     --fs-200: 1.25rem; /* copyright */
     --fs-100: 1.125rem; /* attribution */
-  }
 
-  .card h3 {
-    --fs-800: 2.5rem; /* header title */
-  --fs-700: 3rem; /* footer title */
-  --fs-600: 2.25rem; /* about title */
-  --fs-500: 1.625rem; /* section title */
-
-  --fs-400: 1.25rem; /* large body, subtitle */
-  --fs-300: 1.125rem; /* body, button text */
-
-  --fs-200: 1rem; /* copyright */
-  --fs-100: 0.875rem; /* attribution */
+    --feature-card-margin: var(--size-600);
+    --main-margin: var(--size-900);
   }
 
   .features {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .card h3 {
+    --fs-800: 2.5rem; /* header title */
+    --fs-700: 3rem; /* footer title */
+    --fs-600: 2.25rem; /* about title */
+    --fs-500: 1.625rem; /* section title */
+
+    --fs-400: 1.25rem; /* large body, subtitle */
+    --fs-300: 1.125rem; /* body, button text */
+
+    --fs-200: 1rem; /* copyright */
+    --fs-100: 0.875rem; /* attribution */
+  }
+
+  .features .card:nth-child(1),
+  .features .card:nth-child(2) {
+    --feature-card-margin: var(--size-900);
+  }
+
+
+  .about, .features  {
+    margin-inline: var(--size-650);
+  }
 }
 
 /* 
@@ -435,7 +451,6 @@ a:visited:hover {
   gap: var(--size-300);
   width: min(75em, (100% - (var(--container-padding) * 2)));
   margin-inline: auto;
-  margin-block: var(--size-800);
   padding: var(--size-700) var(--size-600) var(--size-700);
   border-radius: 3% 3% 4% 4%;
   border-top: 6px var(--clr-primary-300) solid;
@@ -449,6 +464,19 @@ a:visited:hover {
 
 .card > p {
   text-wrap: pretty;
+}
+
+/* Margins */
+.hero {
+  margin-bottom: var(--main-margin);
+}
+
+.call-to-action {
+  margin-top: var(--main-margin);
+}
+
+.card {
+  margin-top: var(--feature-card-margin);
 }
 
 .topbar {
@@ -523,7 +551,6 @@ a:visited:hover {
 .card img {
   aspect-ratio: 1 / 1;
 }
-
 
 /* Call to Action Section */
 .call-to-action {
