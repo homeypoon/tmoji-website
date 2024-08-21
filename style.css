@@ -52,99 +52,12 @@
   --size-900: 5rem;
   --size-950: 5.5rem;
 
-  --breakpoint-small: 23.5em;
-  --breakpoint-medium: 42em;
-  --breakpoint-medium-max: 50em;
-  --breakpoint-large: 80em;
-
   --container-padding: var(--size-550);
 
   /* margin below hero and above CTA */
   --main-margin: var(--size-800); 
   
   --feature-card-margin: var(--size-700);
-}
-
-/* Below 23.5em */
-@media (max-width: 23.5rem) {
-  :root {
-    /* background-color: black; */
-    --fs-400: 1.125rem;
-    --fs-300: 1rem;
-    --container-padding: var(--size-400);
-  }
-}
-
-/* 25em to 30em and 40+em */
-@media (min-width: 42em) and (max-width: 52em), (min-width: 80em) {
-  :root {
-    background-color: orange;
-    --fs-800: 5rem; /* header title */
-    --fs-700: 5rem; /* footer title */
-    --fs-600: 3.5rem; /* about title */
-    --fs-500: 3rem; /* section title */
-    --fs-400: 1.625rem; /* large body, subtitle */
-    --fs-300: 1.5rem; /* body, button text */
-    --fs-200: 1.25rem; /* copyright */
-    --fs-100: 1.125rem; /* attribution */
-
-    --container-padding: var(--size-650);
-  }
-
-  /* .features {
-    grid-template-columns: repeat(2, 1fr);
-  } */
-
-  .card {
-    padding-top: auto;
-    gap: var(--size-200);
-  }
-}
-
-/* between 50em and 80 em (2x2 Grid) CHANGEEE!!!!!!!! */
-@media (min-width: 52em) and (max-width: 80em) {
-  :root {
-    --fs-800: 5rem; /* header title */
-    --fs-700: 5rem; /* footer title */
-    --fs-600: 3.5rem; /* about title */
-    --fs-500: 3rem; /* section title */
-    --fs-400: 1.625rem; /* large body, subtitle */
-    --fs-300: 1.5rem; /* body, button text */
-    --fs-200: 1.25rem; /* copyright */
-    --fs-100: 1.125rem; /* attribution */
-
-    --container-padding: var(--size-300);
-    --feature-card-margin: var(--size-600);
-    --main-margin: var(--size-900);
-  }
-
-  .features {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .card h3 {
-    --fs-800: 2.5rem; /* header title */
-    --fs-700: 3rem; /* footer title */
-    --fs-600: 2.25rem; /* about title */
-    --fs-500: 1.625rem; /* section title */
-
-    --fs-400: 1.25rem; /* large body, subtitle */
-    --fs-300: 1.125rem; /* body, button text */
-
-    --fs-200: 1rem; /* copyright */
-    --fs-100: 0.875rem; /* attribution */
-  }
-
-  /* Added spacing between about and top of features section */
-  .features .card:nth-child(1),
-  .features .card:nth-child(2) {
-    --feature-card-margin: var(--size-850);
-  }
-
-  .about,
-  .features {
-    margin-inline: var(--size-400);
-  }
 }
 
 /* 
@@ -597,4 +510,150 @@ footer p:nth-of-type(2) {
 .social-icons ul li a:hover,
 .social-icons ul li a:focus-visible {
   opacity: 0.7;
+}
+
+
+/* Below 23.5em */
+@media (max-width: 23.5rem) {
+  :root {
+    /* background-color: black; */
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --container-padding: var(--size-400);
+  }
+}
+
+/* 25em to 30em and 40+em */
+@media (min-width: 42em) and (max-width: 52em), (min-width: 66em) {
+  :root {
+    background-color: orange;
+    --fs-800: 5rem; /* header title */
+    --fs-700: 5rem; /* footer title */
+    --fs-600: 3.5rem; /* about title */
+    --fs-500: 3rem; /* section title */
+    --fs-400: 1.625rem; /* large body, subtitle */
+    --fs-300: 1.5rem; /* body, button text */
+    --fs-200: 1.25rem; /* copyright */
+    --fs-100: 1.125rem; /* attribution */
+
+    --container-padding: var(--size-650);
+  }
+
+  /* .features {
+    grid-template-columns: repeat(2, 1fr);
+  } */
+
+  .card {
+    padding-top: auto;
+    background-color: orange;
+
+    gap: var(--size-200);
+  }
+}
+
+/* 2x2 Grid between 50em and 80 em CHANGEEE!!!!!!!! */
+@media (min-width: 52em) and (max-width: 66em) {
+  :root {
+    --fs-800: 5rem; /* header title */
+    --fs-700: 5rem; /* footer title */
+    --fs-600: 3.5rem; /* about title */
+    --fs-500: 3rem; /* section title */
+    --fs-400: 1.625rem; /* large body, subtitle */
+    --fs-300: 1.5rem; /* body, button text */
+    --fs-200: 1.25rem; /* copyright */
+    --fs-100: 1.125rem; /* attribution */
+
+    --container-padding: var(--size-300);
+    --feature-card-margin: var(--size-600);
+    --main-margin: var(--size-900);
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card h3 {
+    --fs-800: 2.5rem; /* header title */
+    --fs-700: 3rem; /* footer title */
+    --fs-600: 2.25rem; /* about title */
+    --fs-500: 1.625rem; /* section title */
+
+    --fs-400: 1.25rem; /* large body, subtitle */
+    --fs-300: 1.125rem; /* body, button text */
+
+    --fs-200: 1rem; /* copyright */
+    --fs-100: 0.875rem; /* attribution */
+  }
+
+  .call-to-action h2 {
+    --fs-700: 2.75rem;
+  }
+
+  /* Added spacing between about and top of features section */
+  .features .card:nth-child(1),
+  .features .card:nth-child(2) {
+    --feature-card-margin: var(--size-850);
+  }
+
+  .about,
+  .features {
+    margin-inline: var(--size-400);
+  }
+}
+
+/* Larger Hero and Call to Action after 2x2 Grid */
+@media (min-width: 52em) {
+
+  :root {
+    background-color: aqua;
+  }
+
+  .hero  {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: var(--size-900) var(--size-800) var(--size-900);
+  }
+
+  .hero .content {
+    text-align: left;
+    flex: 7.5;
+    background-color: green;
+  }
+
+  .hero img {
+    flex: 2.5;
+    background-color: antiquewhite;
+  }
+
+  .call-to-action {
+    display: flex;
+    flex-direction: row;
+    padding: var(--size-900) var(--size-900) var(--size-900);
+  }
+
+  .call-to-action .content {
+    text-align: left;
+    flex: 5.5;
+    /* background-color: green; */
+  }
+
+  .call-to-action img {
+    flex: 4.5;
+  }
+  
+  .topbar {
+    margin: var(--size-500) var(--size-600);
+  }
+
+  .topbar img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .topbar .icon {
+    border-radius: 50%;
+    padding: 6px;
+    box-shadow: 2px 4px 4px 0px hsla(0, 0%, 0%, 0.2);
+  }
+
 }
