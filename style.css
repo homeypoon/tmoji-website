@@ -24,14 +24,16 @@
   --fw-extra-bold: 800;
 
   /* Font Sizes */
-  --fs-800: 5rem; /* header title */
-  --fs-700: 5rem; /* footer title */
-  --fs-600: 3.5rem; /* about title */
-  --fs-500: 3rem; /* section title */
-  --fs-400: 1.625rem; /* large body, subtitle */
-  --fs-300: 1.5rem; /* body, button text */
-  --fs-200: 1.25rem; /* copyright */
-  --fs-100: 1.125rem; /* attribution */
+  --fs-800: 2.5rem; /* header title */
+  --fs-700: 3rem; /* footer title */
+  --fs-600: 2.25rem; /* about title */
+  --fs-500: 1.625rem; /* section title */
+
+  --fs-400: 1.25rem; /* large body, subtitle */
+  --fs-300: 1.125rem; /* body, button text */
+
+  --fs-200: 1rem; /* copyright */
+  --fs-100: 0.875rem; /* attribution */
 
   --size-50: 0.125rem;
   --size-100: 0.25rem;
@@ -49,27 +51,57 @@
   --size-850: 4rem;
   --size-900: 5rem;
   --size-950: 5.5rem;
+
+  --breakpoint-small: 23.5em;
+  --breakpoint-medium: 42em;
+  --breakpoint-medium-max: 50em;
+  --breakpoint-large: 80em;
+
+  --container-padding: var(--size-550);
 }
 
-@media (max-width: 40rem) {
+/* Below 23.5em */
+@media (max-width: 23.5rem) {
   :root {
-    --fs-800: 2.5rem;
-    --fs-700: 3rem;
-    --fs-600: 2.25rem;
-    --fs-500: 1.625rem;
-    --fs-400: 1.25rem;
-    --fs-300: 1.125rem;
-    --fs-200: 1rem;
-    --fs-100: 0.875rem;
-  }
-}
-
-@media (max-width: 25rem) {
-  :root {
-    --fs-300: 1rem;
+    /* background-color: black; */
     --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --container-padding: var(--size-400);
   }
 }
+
+/* 25em to 30em and 40+em */
+@media (min-width: 42em) and (max-width: 50em), (min-width: 80em) {
+  :root {
+    /* background-color: orange; */
+    --fs-800: 5rem; /* header title */
+    --fs-700: 5rem; /* footer title */
+    --fs-600: 3.5rem; /* about title */
+    --fs-500: 3rem; /* section title */
+    --fs-400: 1.625rem; /* large body, subtitle */
+    --fs-300: 1.5rem; /* body, button text */
+    --fs-200: 1.25rem; /* copyright */
+    --fs-100: 1.125rem; /* attribution */
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    padding-top: auto;
+    gap: var(--size-200);
+    margin-block: var(--size-450);
+  }
+}
+/* 
+@media (min-width: 950px) {
+  .features {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 100em;
+    margin: 3em auto;
+  }
+} */
 
 /* CSS Reset */
 /* https://piccalil.li/blog/a-modern-css-reset */
@@ -340,8 +372,6 @@ a:visited:hover {
   color: var(--clr-neutral-100);
 }
 
-
-
 .download-button {
   cursor: pointer;
   text-decoration: none;
@@ -368,7 +398,7 @@ a:visited:hover {
   text-align: center;
 
   gap: var(--size-300);
-  width: min(75em, (100% - (var(--size-400) * 2)));
+  width: min(75em, (100% - (var(--container-padding) * 2)));
   margin-inline: auto;
   margin-block: var(--size-800);
   padding: var(--size-700) var(--size-600) var(--size-700);
@@ -440,6 +470,11 @@ a:visited:hover {
 }
 
 /* Features Section */
+.features {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
 .features > .card > h3 {
   font-weight: var(--fw-extra-bold);
   font-size: var(--fs-500);
@@ -494,4 +529,3 @@ footer p:nth-of-type(2) {
 .social-icons ul li a:focus-visible {
   opacity: 0.7;
 }
-
