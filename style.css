@@ -431,6 +431,8 @@ a:visited:hover {
 
 .topbar img {
   border-radius: 50%;
+  width: 64px;
+  height: 64px;
 }
 
 .hero-container {
@@ -627,7 +629,6 @@ footer p:nth-of-type(2) {
   }
 }
 
-
 /* 2x2 Grid */
 @media (min-width: 57em) and (max-width: 75em) {
   :root {
@@ -758,7 +759,6 @@ footer p:nth-of-type(2) {
     text-wrap: balance;
   }
 }
-
 
 /* Large cards */
 @media (min-width: 75em) {
