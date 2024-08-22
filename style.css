@@ -189,7 +189,7 @@ svg {
 }
 
 .bg-gradient-to-b-sunset-orange {
-  background: linear-gradient(180deg, #FBAE71 0%, #EE5B2D 70%);
+  background: linear-gradient(180deg, #fbae71 0%, #ee5b2d 70%);
 }
 
 .text-primary-300 {
@@ -464,6 +464,7 @@ a:visited:hover {
   margin-right: auto;
   margin-left: auto;
   width: clamp(120px, 45%, 450px);
+  max-height: 47rem;
 }
 
 /* About Section */
@@ -604,7 +605,7 @@ footer p:nth-of-type(2) {
 }
 
 /* Large fonts */
-@media (min-width: 42em) and (max-width: 57em), (min-width: 75em) {
+@media (min-width: 42em) and (max-width: 56.999em), (min-width: 75em) {
   :root {
     --fs-800: 5rem; /* header title */
     --fs-700: 5rem; /* footer title */
@@ -626,6 +627,7 @@ footer p:nth-of-type(2) {
   }
 }
 
+
 /* 2x2 Grid */
 @media (min-width: 57em) and (max-width: 75em) {
   :root {
@@ -642,6 +644,7 @@ footer p:nth-of-type(2) {
     --feature-card-margin: var(--size-600);
     --main-margin: var(--size-900);
     --swiper-margin-top: var(--size-400);
+    --hero-padding: var(--size-900) var(--size-750) var(--size-950);
   }
 
   .features {
@@ -755,6 +758,7 @@ footer p:nth-of-type(2) {
     text-wrap: balance;
   }
 }
+
 
 /* Large cards */
 @media (min-width: 75em) {
