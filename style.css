@@ -424,7 +424,8 @@ a:visited:hover {
 
 .topbar .icon {
   border-radius: 50%;
-  padding: 2px;
+  width: 50px;
+  height: 50px;
   background-color: white;
   box-shadow: 2px 4px 4px 0px hsla(0, 0%, 0%, 0.2);
 }
@@ -600,6 +601,11 @@ footer p:nth-of-type(2) {
     --hero-padding: var(--size-900) var(--size-800) var(--size-900);
   }
 
+  .topbar .icon {
+    width: 70px;
+    height: 70px;
+  }
+
   .topbar img {
     width: 64px;
     height: 64px;
@@ -722,15 +728,16 @@ footer p:nth-of-type(2) {
     flex: 4;
   }
 
+  .topbar .icon {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    box-shadow: 2px 4px 4px 0px hsla(0, 0%, 0%, 0.2);
+  }
+
   .topbar img {
     width: 64px;
     height: 64px;
-  }
-
-  .topbar .icon {
-    border-radius: 50%;
-    padding: 6px;
-    box-shadow: 2px 4px 4px 0px hsla(0, 0%, 0%, 0.2);
   }
 
   /* Footer */
