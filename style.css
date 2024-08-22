@@ -61,7 +61,7 @@
   /* margin below hero and above CTA */
   --main-margin: var(--size-800);
   --feature-card-margin: var(--size-700);
-  --swiper-margin-top: var(--size-550);
+  --swiper-margin-top: var(--size-400);
 
   --container-max-width: 46em;
 }
@@ -481,7 +481,7 @@ a:visited:hover {
   height: auto;
   border-radius: 5%;
   box-shadow: 0px 0px 4px 0px hsla(0, 0%, 0%, 0.2);
-  margin-top: var(swiper-margin-top);
+  margin-top: var(--swiper-margin-top);
 }
 
 .swiper-wrapper {
@@ -587,6 +587,7 @@ footer p:nth-of-type(2) {
     --fs-400: 1.125rem;
     --fs-300: 1rem;
     --container-padding: var(--size-400);
+    --swiper-margin-top: var(--size-250);
   }
 }
 
@@ -615,6 +616,7 @@ footer p:nth-of-type(2) {
 
     --container-padding: var(--size-650);
     --button-padding: var(--size-600) var(--size-700);
+    --swiper-margin-top: var(--size-600);
   }
 
   .card {
@@ -638,6 +640,7 @@ footer p:nth-of-type(2) {
     --container-padding: var(--size-300);
     --feature-card-margin: var(--size-600);
     --main-margin: var(--size-900);
+    --swiper-margin-top: var(--size-400);
   }
 
   .features {
@@ -787,7 +790,6 @@ footer p:nth-of-type(2) {
     padding: var(--size-900) var(--size-950) var(--size-900);
   }
 }
-
 
 .hero-container,
 .card,
