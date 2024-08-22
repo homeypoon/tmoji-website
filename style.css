@@ -111,7 +111,7 @@ body {
 
 /* Set core body defaults */
 body {
-  text-rendering: optimizeSpeed;
+  text-rendering: auto;
   line-height: 1.5;
 }
 
@@ -516,6 +516,27 @@ a:visited:hover {
   height: 100%;
   object-fit: contain;
   margin: var(--size-800) 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--clr-primary-800);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: var(--clr-neutral-100);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--clr-primary-500) !important;
+}
+
+@media (max-width: 911px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
 }
 
 /* Features Section */

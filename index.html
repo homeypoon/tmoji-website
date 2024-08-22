@@ -78,6 +78,10 @@
 
             <!-- Pagination -->
             <div class="swiper-pagination"></div>
+
+            <!-- Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </div>
@@ -192,6 +196,11 @@
         912: {
           slidesPerView: 3,
           spaceBetween: 20,
+
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
         },
       },
     });
