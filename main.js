@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
     {
-      threshold: 0.1, // Adjust the threshold as needed
+      threshold: 0.0, // Adjust the threshold as needed
     }
   );
 
