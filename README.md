@@ -6,7 +6,7 @@
 ## Project Overview ##
 The T-moji website is a fully responsive and visually captivating platform that immerses users in the [T-moji](https://github.com/homeypoon/T-moji) experience. Designed to showcase the iOS app's engaging features and benefits, the website allows visitors to easily explore and download the app. 
 
-You can check it out live at [https://tmoji.netlify.app/](url).
+You can check it out live at <a href="http://tmoji.netlify.app">tmoji.netlify.app</a>
 
 
 ## Features ##
